@@ -6,7 +6,7 @@ try: # check if BeautifulSoup4 is installed
 except:
     soupAvailable = False
 
-class Hearthstone:
+class XarxHS:
 
     def __init__(self, bot):
         self.bot = bot
@@ -46,6 +46,6 @@ class Hearthstone:
 
 def setup(bot):
     if soupAvailable:
-        bot.add_cog(Hearthstone(bot))
+        bot.add_cog(XarxHS(bot))
     else:
 raise RuntimeError("You need to run `pip3 install beautifulsoup4`")
