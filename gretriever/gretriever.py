@@ -24,7 +24,7 @@ class Gretriever(BaseCog):
         self.goldenapi = goldenapi
 
     @commands.command()
-    @commands.cooldown(1, 60, commands.BucketType.guild)
+    @commands.cooldown(1, 10, commands.BucketType.guild)
     async def goldendoggo(self, ctx):
         """Shows a golden retriever"""
         try:
@@ -35,7 +35,7 @@ class Gretriever(BaseCog):
             await ctx.send("API Error")
 
     @commands.command()
-    @commands.cooldown(1, 120, commands.BucketType.guild)
+    @commands.cooldown(1, 10, commands.BucketType.guild)
     async def goldendoggos(self, ctx, amount : int = 5):
         """Throws a golden retriever bomb!
         Defaults to 5, max is 10"""
