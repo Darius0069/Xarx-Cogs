@@ -27,3 +27,6 @@ class HS(commands.Cog):
                 await self.bot.say("`Could not find that card, check your spelling or try another card.`")
         else:
             await self.bot.say("```card [name]\n\nSearches http://www.hearthpwn.com/\nReturns first available card that matches the search text.\nUse \"cardg\" to get gold cards.```")
+
+    def __unload(self):
+        self.bot.loop.create_task(self.session.close())
