@@ -21,7 +21,7 @@ class Gretriever(BaseCog):
     def __init__(self, bot):
         self.bot = bot
         self.session = aiohttp.ClientSession(loop=self.bot.loop)
-        self.grapi = dogapi
+        self.grapi = grapi
 
     @commands.command()
     @commands.cooldown(1, 60, commands.BucketType.guild)
