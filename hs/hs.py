@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup
 class HS(BaseCog):
     """WIP HS Thing"""
 
-        def __init__(self, bot):
-            self.bot = bot
+    def __init__(self, bot):
+        self.bot = bot
 
     @commands.command()
     async def hsping(self, ctx):
