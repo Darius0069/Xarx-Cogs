@@ -27,12 +27,9 @@ class Gretriever(BaseCog):
     @commands.cooldown(1, 60, commands.BucketType.guild)
     async def gretriever(self, ctx):
         """Shows a Golden Retriever"""
-        try:
             async with self.session.get(self.grapi) as r:
                 result = await r.json()
             await ctx.send(result['file'])
-        except:
-            await ctx.send("API Error")
 
 
     def __unload(self):
