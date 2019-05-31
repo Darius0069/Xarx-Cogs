@@ -4,6 +4,8 @@ from redbot.core import commands
 import urllib.request
 from bs4 import BeautifulSoup
 
+BaseCog = getattr(commands, "Cog", object)
+
 class HS(BaseCog):
     """WIP HS Thing"""
 
