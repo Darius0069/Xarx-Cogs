@@ -4,8 +4,11 @@ from redbot.core import commands
 import urllib.request
 from bs4 import BeautifulSoup
 
-class HS(commands.Cog):
+class HS(BaseCog):
     """WIP HS Thing"""
+
+        def __init__(self, bot):
+            self.bot = bot
 
     @commands.command()
     async def hsping(self, ctx):
