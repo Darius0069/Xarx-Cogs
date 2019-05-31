@@ -10,7 +10,7 @@ from redbot.core import commands
 # Libs
 import aiohttp
 
-grapi = "https://dog.ceo/api/breed/retriever-golden/image/random"
+grapi = "https://dog.ceo/api/breed/retriever/golden/images/random"
 
 BaseCog = getattr(commands, "Cog", object)
 
