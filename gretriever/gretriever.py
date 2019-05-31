@@ -37,5 +37,3 @@ class Gretriever(BaseCog):
 
     def __unload(self):
         self.bot.loop.create_task(self.session.close())
-
-__del__ = __unload
