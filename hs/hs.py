@@ -19,8 +19,8 @@ response = unirest.get("https://irythia-hs.p.rapidapi.com/card?name=Ysera",
   }
 )
 
-        @commands.command()
-        async def hsping(self, ctx):
-            """This does stuff!"""
-            # Your code will go here
-            await ctx.send(response)
+@commands.command()
+async def hsping(self, ctx):
+"""This does stuff!"""
+# Your code will go here
+await ctx.send(response)
