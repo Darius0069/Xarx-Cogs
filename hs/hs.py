@@ -20,8 +20,6 @@ param = {
 }
 
 response = requests.get(url, headers=param)
-response
-
 
 @commands.command()
 async def hsping(self, ctx):
