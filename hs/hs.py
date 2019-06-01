@@ -19,5 +19,5 @@ class HS:
         except:
             await self.bot.say("Couldn't load amount of players. No one is playing this game anymore or there's an error.")
 
-        def __unload(self):
-        self.bot.loop.create_task(self.session.close())
+def __unload(self):
+self.bot.loop.create_task(self.session.close())
