@@ -2,6 +2,7 @@ import discord
 from redbot.core import commands
 import urllib.request
 import aiohttp
+import requests
 
 BaseCog = getattr(commands, "Cog", object)
 
