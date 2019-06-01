@@ -1,10 +1,6 @@
 from discord.ext import commands
 import aiohttp
-try: # check if BeautifulSoup4 is installed
-    from bs4 import BeautifulSoup
-soupAvailable = True
-except:
-soupAvailable = False
+from bs4 import BeautifulSoup
 
 class HS:
     """idk if I'll ever get this fucking shit to work"""
