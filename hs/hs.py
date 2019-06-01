@@ -6,10 +6,6 @@ class HS:
     """idk if I'll ever get this fucking shit to work"""
     def __init__(self, bot):
         self.bot = bot
-	if soupAvailable:
-        self.bot = bot
-	else:
-		raise RuntimeError("You need to run `pip3 install beautifulsoup4`")
 
     @commands.cooldown(1, 10, commands.BucketType.guild)
     async def hscard(self, ctx):
