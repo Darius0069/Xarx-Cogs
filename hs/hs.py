@@ -13,7 +13,7 @@ class HS:
           '(watch\?v=|embed/|v/|.+\?v=)?([^&=%\?]{11})')
 
     @commands.command(pass_context=True, name='hs', no_pm=True)
-    async def _youtube(self, context, *, query: str):
+    async def _youtube(self, ctx, *, query: str):
         """Search on Youtube"""
         try:
             url = 'https://www.youtube.com/results?'
