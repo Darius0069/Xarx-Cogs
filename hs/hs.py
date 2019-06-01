@@ -1,7 +1,6 @@
 import discord
 from redbot.core import commands
 import urllib.request
-import unirest
 import aiohttp
 
 BaseCog = getattr(commands, "Cog", object)
@@ -12,12 +11,16 @@ class HS(BaseCog):
     def __init__(self, bot):
         self.bot = bot
 
-response = unirest.get("https://irythia-hs.p.rapidapi.com/card?name=Ysera",
-  headers={
-    "X-RapidAPI-Host": "irythia-hs.p.rapidapi.com",
+url = 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/ysera'
+
+param = {
+    "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com",
     "X-RapidAPI-Key": "wXIuOpjmlRmsheQch0AYHKBPlGb0p1Z2Zf5jsnyZ5RwvU48gKY"
-  }
-)
+}
+
+response = requests.get(url, headers=param)
+response
+
 
 @commands.command()
 async def hsping(self, ctx):
