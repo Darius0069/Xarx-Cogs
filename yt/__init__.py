@@ -1,4 +1,4 @@
-from .hs import HS
+from .yt import YT
 
 def setup(bot):
-    bot.add_cog(HS(bot))
+    bot.add_cog(YT(bot))
