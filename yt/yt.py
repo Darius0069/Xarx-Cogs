@@ -29,7 +29,7 @@ class YT:
             await self.bot.say(url)
         except Exception as e:
             message = 'Something went terribly wrong! [{}]'.format(e)
-await self.bot.say(message)
+            await self.bot.say(message)
 
 def __unload(self):
     self.bot.loop.create_task(self.session.close())
