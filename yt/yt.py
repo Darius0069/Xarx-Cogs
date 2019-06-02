@@ -13,7 +13,7 @@ class YT:
           '(watch\?v=|embed/|v/|.+\?v=)?([^&=%\?]{11})')
 
     @commands.command(pass_context=True, name='yt', no_pm=True)
-    async def yt(self, context, *, query: str):
+    async def yt(self, ctx, *, query: str):
         """Search on Youtube"""
         try:
             url = 'https://www.youtube.com/results?'
