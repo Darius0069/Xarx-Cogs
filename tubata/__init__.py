@@ -1,4 +1,4 @@
-from .yt import YT
+from .tubata import Tubata
 
 def setup(bot):
-    bot.add_cog(YT(bot))
+    bot.add_cog(Tubata(bot))
