@@ -3,7 +3,7 @@ import aiohttp
 import re
 
 
-class YT:
+class Tubata:
     """Le YouTube Cog"""
     def __init__(self, bot):
         self.bot = bot
@@ -12,8 +12,8 @@ class YT:
           '(youtube|youtu|youtube-nocookie)\.(com|be)/'
           '(watch\?v=|embed/|v/|.+\?v=)?([^&=%\?]{11})')
 
-    @commands.command(pass_context=True, name='yt', no_pm=True)
-    async def yt(self, ctx, *, query: str):
+    @commands.command(pass_context=True, name='tubata', no_pm=True)
+    async def tubata(self, ctx, *, query: str):
         """Search on Youtube"""
         try:
             url = 'https://www.youtube.com/results?'
