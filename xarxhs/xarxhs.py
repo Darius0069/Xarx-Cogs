@@ -62,7 +62,7 @@ class Xarxhs(BaseCog):
             await ctx.send("No card found bro")
             return
 
-        if response1 is None:
+        if response2 is None:
             await ctx.send("No card found bro 2")
         else:
             await ctx.send(box(fuckthis, lang='java'))
