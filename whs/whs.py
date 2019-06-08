@@ -23,4 +23,4 @@ class Xarxhs(BaseCog):
     async def hshook(self, ctx, lfcard):
         """Keep calm sigh"""
         webhook = Webhook.from_url('https://hearthstoneapi.com/webhook/slack', adapter=AsyncWebhookAdapter(session))
-        await Webhook.send('I'm working!, username=lfcard)
+        await Webhook.send("I'm working!", username=lfcard)
