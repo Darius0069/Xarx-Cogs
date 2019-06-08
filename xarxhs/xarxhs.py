@@ -46,7 +46,7 @@ class Xarxhs(BaseCog):
 
         @commands.command()
         @commands.bot_has_permissions(embed_links=True)
-        async def xarxcard(self, ctx, acardname):
+        async def acard(self, ctx, acardname):
             """Show pokemon info"""
 
             try:
