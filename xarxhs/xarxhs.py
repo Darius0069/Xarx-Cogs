@@ -43,25 +43,24 @@ class Xarxhs(BaseCog):
             await ctx.send("No card found 404")
         else:
             cardname = response1["name"]
-            await ctx.send = str(cardname)
 
-#            # Conversion for embed
-#            cardcost = str(response1["cost"]) + " mana"
-#            cardattack = str(response1["attack"]) + " attack"
-#            cardhealth = str(response1["health"]) + " health"
-#            cardimg = str(response1["img"])
-#            cardtxt = str(response1["text"])
-#
-#            # Build Embed
-#            embed = discord.Embed()
-#            embed.title = response1["name"].capitalize()
-#            embed.description = cardtxt
-#            embed.set_thumbnail(url=cardimg)
-#            embed.add_field(name="Manacost", value=cost)
-#            embed.add_field(name="Attack", value=attack)
-#            embed.add_field(name="Health", value=health)
-#            embed.set_footer(text="Powered by RapidAPI")
-#            await ctx.send(embed=embed)
+            # Conversion for embed
+            cardcost = str(response1["0"]["cost"]) + " mana"
+            cardattack = str(response1["0"]["attack"]) + " attack"
+            cardhealth = str(response1["0"]["health"]) + " health"
+            cardimg = str(response1["0"]["img"])
+            cardtxt = str(response1["0"]["text"])
+
+            # Build Embed
+            embed = discord.Embed()
+            embed.title = response1["name"].capitalize()
+            embed.description = cardtxt
+            embed.set_thumbnail(url=cardimg)
+            embed.add_field(name="Manacost", value=cost)
+            embed.add_field(name="Attack", value=attack)
+            embed.add_field(name="Health", value=health)
+            embed.set_footer(text="Powered by RapidAPI")
+            await ctx.send(embed=embed)
 
 #        # Handles response1
 #        if response1.get("detail") == "Not found.":
