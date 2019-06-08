@@ -33,7 +33,6 @@ class Xarxhs(BaseCog):
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
                     response1 = await r1.json()
-                await ctx.send(response1['0']['img'])
 
         except:
             await ctx.send("No card found bro")
@@ -45,6 +44,8 @@ class Xarxhs(BaseCog):
             cardhealth = str(response1["0"]["health"]) + " health"
             cardimg = url(response1["0"]["img"])
             cardtxt = str(response1["0"]["text"])
+
+        await ctx.send(cardimg)
 
             # Build Embed
             embed = discord.Embed()
