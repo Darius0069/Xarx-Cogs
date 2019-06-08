@@ -41,9 +41,8 @@ class Xarxhs(BaseCog):
         if response1 is None:
             await ctx.send("No card found bro 2")
         else:
-            print(response1['name'])
-            print(response1['0']['name'])
-            
+            print(response1['']['0']['name'])
+
 #        # Build Embed
 #        embed = discord.Embed()
 #        embed.title = response1["0"]["name"].capitalize()
