@@ -55,8 +55,8 @@ class Xarxhs(BaseCog):
                 # Queries shit
                 async with aiohttp.ClientSession() as session:
                     async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + acardname.lower(), headers=headers) as r1:
-                        print(r1.status)
-                        print(await r1.json())
+                    status = r1.status
+                    await ctx.send(status)
 
             except:
                 await ctx.send("No card found bro")
