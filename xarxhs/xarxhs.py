@@ -42,20 +42,20 @@ class Xarxhs(BaseCog):
         if response1.get("message") == "Card not found.":
             await ctx.send("No card found 404")
         else:
-            cardname = response1["name"]
+            cardname = response1["0"]["name"]
 
             # Conversion for embed
             cardcost = str(response1["0"]["cost"]) + " mana"
             cardattack = str(response1["0"]["attack"]) + " attack"
             cardhealth = str(response1["0"]["health"]) + " health"
-            cardimg = str(response1["0"]["img"])
+            cardimg = url(response1["0"]["img"])
             cardtxt = str(response1["0"]["text"])
 
             # Build Embed
             embed = discord.Embed()
-            embed.title = response1["name"].capitalize()
+            embed.title = response1["0"]["name"].capitalize()
             embed.description = cardtxt
-            embed.set_thumbnail(url=cardimg)
+            embed.set_thumbnail = cardimg
             embed.add_field(name="Manacost", value=cost)
             embed.add_field(name="Attack", value=attack)
             embed.add_field(name="Health", value=health)
