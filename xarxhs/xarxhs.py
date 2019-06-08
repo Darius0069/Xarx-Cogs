@@ -45,7 +45,7 @@ class Xarxhs(BaseCog):
             cardimg = url(response1["0"]["img"])
             cardtxt = str(response1["0"]["text"])
 
-        await ctx.send(response1['0']['img'])
+        await ctx.send("cardimg")
 
         # Build Embed
         embed = discord.Embed()
