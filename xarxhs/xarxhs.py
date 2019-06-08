@@ -22,8 +22,8 @@ class Xarxhs(BaseCog):
         self.zam = zam
 
     @commands.command()
-async def commandname(self, ctx, *, cardname) # Grabs the card name.
-    await ctx.send(cardname)
+    async def commandname(self, ctx, *, cardname) # Grabs the card name.
+        await ctx.send(cardname)
 
     def __unload(self):
         self.bot.loop.create_task(self.session.close())
