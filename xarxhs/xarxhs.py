@@ -43,7 +43,7 @@ class Xarxhs(BaseCog):
             await ctx.send("No card found 404")
         else:
             cardname = response1["name"]
-            await ctx.send = cardname
+            await ctx.send = str(cardname)
 
 #            # Conversion for embed
 #            cardcost = str(response1["cost"]) + " mana"
