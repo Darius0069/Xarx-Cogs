@@ -55,16 +55,12 @@ class Xarxhs(BaseCog):
                 # Queries pokeapi for Name, ID and evolution_chain
                 async with aiohttp.ClientSession() as session:
                     async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
-                        response1 = await r1.json()
+                        print(r1.status)
+                        print(response1 = await r1.json())
 
             except:
                 await ctx.send("No card found bro")
                 return
-
-            if response1 is None:
-                await ctx.send("No card found bro 2")
-            else:
-                await ctx.send(box(response1.body['0']['dbfId'], lang='ini'))
 
 #        # Build Embed
 #        embed = discord.Embed()
