@@ -56,11 +56,12 @@ class Xarxhs(BaseCog):
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r2:
                     response2 = await r1.json()
-                    fuckthis = str(response2['img'])
 
         except:
             await ctx.send("No card found bro")
             return
+
+        fuckthis = str(response2['img'])
 
         if response2 is None:
             await ctx.send("No card found bro 2")
