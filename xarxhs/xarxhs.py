@@ -45,18 +45,18 @@ class Xarxhs(BaseCog):
             cardimg = url(response1["0"]["img"])
             cardtxt = str(response1["0"]["text"])
 
-        await ctx.send("cardimg")
+        await ctx.send(url(cardimg))
 
-        # Build Embed
-        embed = discord.Embed()
-        embed.title = response1["0"]["name"].capitalize()
-        embed.description = cardtxt
-        embed.set_thumbnail = cardimg
-        embed.add_field(name="Manacost", value=cost)
-        embed.add_field(name="Attack", value=attack)
-        embed.add_field(name="Health", value=health)
-        embed.set_footer(text="Powered by RapidAPI")
-        await ctx.send(embed=embed)
+#        # Build Embed
+#        embed = discord.Embed()
+#        embed.title = response1["0"]["name"].capitalize()
+#        embed.description = cardtxt
+#        embed.set_thumbnail = cardimg
+#        embed.add_field(name="Manacost", value=cost)
+#        embed.add_field(name="Attack", value=attack)
+#        embed.add_field(name="Health", value=health)
+#        embed.set_footer(text="Powered by RapidAPI")
+#        await ctx.send(embed=embed)
 
 #        # Handles response1
 #        if response1.get("detail") == "Not found.":
