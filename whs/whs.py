@@ -3,7 +3,7 @@
 
 # Discord
 import discord
-from discord import Webhook, RequestsWebhookAdapter
+from discord import Webhook, AsyncWebhookAdapter
 # Red
 from redbot.core import commands
 # Libs
