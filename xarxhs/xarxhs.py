@@ -4,7 +4,7 @@
 # Discord
 import discord
 # Red
-from redbot.core import commands
+import redbot.core
 # Libs
 import aiohttp
 

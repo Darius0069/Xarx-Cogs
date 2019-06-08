@@ -1,1 +1,10 @@
-
+{
+    "author" : "Xarx (Darius#0069)",
+    "install_msg" : "Someday I'll be a real cog.",
+    "name" : "Xarxhs",
+    "short" : "Doesn't do shit yet tho",
+    "description" : "Doesn't do shit yet tho.",
+    "disabled" : false,
+    "tags" : ["image", "picture", "games", "hearthstone"],
+    "min_python_version": [3, 6, 0]
+}
