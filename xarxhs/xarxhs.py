@@ -42,10 +42,10 @@ class Xarxhs(BaseCog):
             cardcost = str(response1["0"]["cost"]) + " mana"
             cardattack = str(response1["0"]["attack"]) + " attack"
             cardhealth = str(response1["0"]["health"]) + " health"
-            cardimg = url(response1["0"]["img"])
+            cardimg = str(response1["0"]["img"])
             cardtxt = str(response1["0"]["text"])
 
-        await ctx.send(url(cardimg))
+        await ctx.send(cardimg)
 
 #        # Build Embed
 #        embed = discord.Embed()
