@@ -32,7 +32,8 @@ class Xarxhs(BaseCog):
             # Queries pokeapi for Name, ID and evolution_chain
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
-                    cardimg = await r1.json(['img'])
+                    response1 = await r1.json()
+                    cardimg = response1(["img"])
                     await ctx.send(cardimg)
         except:
             await ctx.send("No card found")
