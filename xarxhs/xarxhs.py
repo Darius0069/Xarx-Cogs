@@ -64,7 +64,7 @@ class Xarxhs(BaseCog):
             if response1 is None:
                 await ctx.send("No card found bro 2")
             else:
-                await ctx.send(box(response1['cardId'], lang='ini'))
+                await ctx.send(box(response1[''], lang='ini'))
 
 #        # Build Embed
 #        embed = discord.Embed()
