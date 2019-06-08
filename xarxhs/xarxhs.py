@@ -47,8 +47,8 @@ class Xarxhs(BaseCog):
 
         await ctx.send(cardimg)
 
-            # Build Embed
-            embed = discord.Embed()
+        # Build Embed
+        embed = discord.Embed()
             embed.title = response1["0"]["name"].capitalize()
             embed.description = cardtxt
             embed.set_thumbnail = cardimg
