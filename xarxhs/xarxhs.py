@@ -46,17 +46,17 @@ class Xarxhs(BaseCog):
 
         @commands.command()
         @commands.bot_has_permissions(embed_links=True)
-        async def xarxcard(self, ctx, name_or_id):
+        async def xarxcard(self, ctx, acardname):
             """Show pokemon info"""
 
             try:
                 headers = {"content-type": "application/json", "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com", "X-RapidAPI-Key": "wXIuOpjmlRmsheQch0AYHKBPlGb0p1Z2Zf5jsnyZ5RwvU48gKY"}
 
-                # Queries pokeapi for Name, ID and evolution_chain
+                # Queries shit
                 async with aiohttp.ClientSession() as session:
-                    async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
+                    async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + acardname.lower(), headers=headers) as r1:
                         print(r1.status)
-                        print(response1 = await r1.json())
+                        print(await r1.json())
 
             except:
                 await ctx.send("No card found bro")
