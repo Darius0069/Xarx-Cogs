@@ -41,7 +41,7 @@ class Xarxhs(BaseCog):
         if response1 is None:
             await ctx.send("No card found bro 2")
         else:
-            await ctx.send("There's shit but idk what to do")
+            await ctx.send(str(response1))
 
 #        # Build Embed
 #        embed = discord.Embed()
