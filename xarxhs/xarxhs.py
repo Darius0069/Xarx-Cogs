@@ -53,9 +53,9 @@ class Xarxhs(BaseCog):
                 headers = {"content-type": "application/json", "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com", "X-RapidAPI-Key": "wXIuOpjmlRmsheQch0AYHKBPlGb0p1Z2Zf5jsnyZ5RwvU48gKY"}
 
                 # Queries shit
-            async with aiohttp.ClientSession() as session:
-                async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
-                    response1 = await r1.json(body)
+                async with aiohttp.ClientSession() as session:
+                    async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
+                        response1 = await r1.json(body)
 
         except:
             await ctx.send("No card found bro")
