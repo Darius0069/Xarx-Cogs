@@ -23,5 +23,6 @@ class Whs(BaseCog):
     @commands.bot_has_permissions(manage_webhooks=True)
     async def hshook(self, ctx, lfcard):
         """Keep calm sigh"""
-        webhook = Webhook.from_url('https://hearthstoneapi.com/webhook/slack', adapter=AsyncWebhookAdapter(session))
-        await Webhook.send("I'm working!", username=lfcard)
+        async with aiohttp.ClientSession() as session:
+            webhook = Webhook.from_url('https://hearthstoneapi.com/webhook/slack', adapter=AsyncWebhookAdapter(session))
+            await Webhook.send("I'm working!", username=lfcard)
