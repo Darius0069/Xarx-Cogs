@@ -38,12 +38,6 @@ class Xarxhs(BaseCog):
             await ctx.send("No card found bro")
             return
 
-        # Handles response1
-        if response1.get("message") == "Card not found.":
-            await ctx.send("No card found 404")
-        else:
-            cardname = response1["0"]["name"]
-
             # Conversion for embed
             cardcost = str(response1["0"]["cost"]) + " mana"
             cardattack = str(response1["0"]["attack"]) + " attack"
