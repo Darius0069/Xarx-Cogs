@@ -11,7 +11,7 @@ import aiohttp
 
 BaseCog = getattr(commands, "Cog", object)
 
-class Xarxhs(BaseCog):
+class Whs(BaseCog):
     """Someday it might be just like a real cog"""
 
     def __init__(self, bot):
