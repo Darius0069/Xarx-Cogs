@@ -22,7 +22,7 @@ class Xarxhs(BaseCog):
         self.zam = zam
 
     @commands.command()
-    async def commandname(self, ctx, *, cardname) # Grabs the card name.
+    async def gcard(self, ctx, *, cardname) # Grabs the card name.
         await ctx.send(cardname)
 
     def __unload(self):
