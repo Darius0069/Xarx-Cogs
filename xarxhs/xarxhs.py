@@ -33,47 +33,41 @@ class Xarxhs(BaseCog):
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
                     response1 = await r1.json()
+                    await ctx.send(response1)
 
         except:
             await ctx.send("No card found")
             return
 
 
-        # Handles response1
-        if response1.get("detail") == "Not found.":
-            await ctx.send("No card found")
-        else:
-            cardname = response1["name"]
-
-            # Queries pokeapi for Height, Weight, Sprite
-            async with aiohttp.ClientSession() as session:
-                async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r2:
-                    response2 = await r2.json()
-
-            # Queries pokeapi for Evolutions
-            async with aiohttp.ClientSession() as session:
-                async with session.get(str(text), headers=headers) as r3:
-                    response3 = await r3.json()
-
-            # Selects english description for embed
-            description = ""
-            for i in range(0, len(response1["flavor"])):
-                if response1["flavor"][i]["language"]["name"] == "en":
-                    description = response1["flavor"]
-                    break
-
-            # Conversion for embed
-            cost = str(response2["cost"]) + "mana"
-            attack = str(response2["attack"]) + "attack"
-            health = str(response2["health"]) + "health"
-
-            # Build Embed
-            embed = discord.Embed()
-            embed.title = response1["name"].capitalize()
-            embed.description = description
-            embed.set_thumbnail(url=response2["img"])
-            embed.add_field(name="Cost", value=cost)
-            embed.add_field(name="Attack", value=attack)
-            embed.add_field(name="Health", value=health)
-            embed.set_footer(text="Powered by RapidAPI")
-            await ctx.send(embed=embed)
+#        # Handles response1
+#        if response1.get("detail") == "Not found.":
+#            await ctx.send("No card found")
+#        else:
+#            cardname = response1["name"]
+#
+#            # Queries pokeapi for Height, Weight, Sprite
+#            async with aiohttp.ClientSession() as session:
+#                async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r2:
+#                    response2 = await r2.json()
+#
+#            # Queries pokeapi for Evolutions
+#            async with aiohttp.ClientSession() as session:
+#                async with session.get(str(text), headers=headers) as r3:
+#                    response3 = await r3.json()
+#
+#            # Conversion for embed
+#            cost = str(response2["cost"]) + "mana"
+#            attack = str(response2["attack"]) + "attack"
+#            health = str(response2["health"]) + "health"
+#
+#            # Build Embed
+#            embed = discord.Embed()
+#            embed.title = response1["name"].capitalize()
+#            embed.description = description
+#            embed.set_thumbnail(url=response2["img"])
+#            embed.add_field(name="Cost", value=cost)
+#            embed.add_field(name="Attack", value=attack)
+#            embed.add_field(name="Health", value=health)
+#            embed.set_footer(text="Powered by RapidAPI")
+#            await ctx.send(embed=embed)
