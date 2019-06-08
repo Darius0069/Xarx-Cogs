@@ -33,13 +33,18 @@ class Xarxhs(BaseCog):
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + name_or_id.lower(), headers=headers) as r1:
                     response1 = await r1.json()
-                await ctx.send(response1['imgGold'])
 
         except:
-            await ctx.send("No card found")
+            await ctx.send("No card found bro")
             return
 
-#
+        # Handles response1
+        if response1.get("message") == "Card not found.":
+            await ctx.send("No card found 404")
+        else:
+            cardname = response1["name"]
+            await ctx.send = cardname
+
 #            # Conversion for embed
 #            cardcost = str(response1["cost"]) + " mana"
 #            cardattack = str(response1["attack"]) + " attack"
