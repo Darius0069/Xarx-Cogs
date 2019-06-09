@@ -1,1 +1,9 @@
-
+{
+  "author" : ["Xarx (Darius)"],
+  "bot_version": [3,1,2],
+  "install_msg" : "Feeding time!",
+  "short" : "Display movie information from Rito's API",
+  "description" : "So ye.",
+  "tags" : ["games", "information"],
+  "hidden" : false
+}
