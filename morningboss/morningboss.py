@@ -33,10 +33,10 @@ class Morningboss(commands.Cog):
             if user.id == self.bot.user.id:
                 user = ctx.message.author
                 msg = [
-                    rmorningboss(
+                    (
                         " Morning Mr how are you? Hope doing great. Today i is raedy to go "
                     ),
-                    rmorningboss(
+                    (
                         " Morning boss hope doing great "
                     ),
                 ]
