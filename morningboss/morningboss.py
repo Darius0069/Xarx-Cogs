@@ -45,4 +45,4 @@ class Morningboss(commands.Cog):
             else:
                 await ctx.send(user.mention + msg + choice(rmorningboss))
         else:
-await ctx.send(ctx.message.author.mention + msg + choice(rmorningboss))
+    await ctx.send(ctx.message.author.mention + msg + choice(rmorningboss))
