@@ -11,7 +11,22 @@ rmorningboss = [
     ("Random 6"),
     ("Random 7"),
     ("Random 8"),
-    
+    ("Random 9"),
+    ("Random 10"),
+    ("Random 11"),
+    ("Random 12"),
+    ("Random 13"),
+    ("Random 14"),
+    ("Random 15"),
+    ("Random 16"),
+    ("Random 17"),
+    ("Random 18"),
+    ("Random 19"),
+    ("Random 21"),
+    ("Random 22"),
+    ("Random 23"),
+    ("Random 24"),
+    ("Random 25"),
 ]
 
 class Morningboss(commands.Cog):
