@@ -1,4 +1,4 @@
-from .whs import Whs
+from .morningboss import Morningboss
 
 
 def setup(bot):
