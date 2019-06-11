@@ -3,14 +3,14 @@ from redbot.core import commands
 from random import choice
 
 rmorningboss = [
-    _("Random 1"),
-    _("Random 2"),
-    _("Random 3"),
-    _("Random 4"),
-    _("Random 5"),
-    _("Random 6"),
-    _("Random 7"),
-    _("Random 8"),
+    ("Random 1"),
+    ("Random 2"),
+    ("Random 3"),
+    ("Random 4"),
+    ("Random 5"),
+    ("Random 6"),
+    ("Random 7"),
+    ("Random 8"),
     
 ]
 
