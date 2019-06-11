@@ -3,30 +3,8 @@ from redbot.core import commands
 from random import choice
 
 rmorningboss = [
-    ("Random 1"),
-    ("Random 2"),
-    ("Random 3"),
-    ("Random 4"),
-    ("Random 5"),
-    ("Random 6"),
-    ("Random 7"),
-    ("Random 8"),
-    ("Random 9"),
-    ("Random 10"),
-    ("Random 11"),
-    ("Random 12"),
-    ("Random 13"),
-    ("Random 14"),
-    ("Random 15"),
-    ("Random 16"),
-    ("Random 17"),
-    ("Random 18"),
-    ("Random 19"),
-    ("Random 21"),
-    ("Random 22"),
-    ("Random 23"),
-    ("Random 24"),
-    ("Random 25"),
+    (" Morning boss hope soing great I want to know I can get load of cookie "),
+    (" Morning boss hope soing great I want to know i can get load of cokie "),
 ]
 
 class Morningboss(commands.Cog):
@@ -39,7 +17,7 @@ class Morningboss(commands.Cog):
     @commands.command(aliases=["gmboss", "goodmorningboss"])
     async def morningboss(self, ctx, user: discord.Member = None):
         """
-            Good morning to the user
+            Morningboss-es the targetted user, or the invoker of the command if no user is selected
         """
 
         msg = " "
