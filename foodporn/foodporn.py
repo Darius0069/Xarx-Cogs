@@ -34,13 +34,13 @@ class Foodporn(BaseCog):
                     current_time = int(time.time())
                     posts = []
 
-                    for submission in newsubmissions
-                        subage = ((current_time - submission.created_utc) /60 /60 /24)
-                        if subage < 1:
-                            posts.append(submission)
+                for submission in newsubmissions
+                    subage = ((current_time - submission.created_utc) /60 /60 /24)
+                    if subage < 1:
+                        posts.append(submission)
 
-                    random_number = random.randit(0,LIMIT_POST -1)
-                    random_post = posts[random_number]
+                random_number = random.randit(0,LIMIT_POST -1)
+                random_post = posts[random_number]
             
             await ctx.send(random_post)
         except:
