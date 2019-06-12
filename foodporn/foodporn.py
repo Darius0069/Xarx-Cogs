@@ -9,51 +9,39 @@ from redbot.core import commands
 
 # Libs
 import aiohttp
-import coffeescript
-
-foodpornapi = "http://www.reddit.com/r/FoodPorn.json"
+import time
+import praw
+import random
 
 BaseCog = getattr(commands, "Cog", object)
 
+LIMIT_POST 10
 
 class Foodporn(BaseCog):
     """Gets a random thing from /r/foodporn"""
 
     def __init__(self, bot):
         self.bot = bot
-        self.session = aiohttp.ClientSession(loop=self.bot.loop)
-        self.foodpornapi = foodpornapi
+        self.subreddit = reddit.subreddit("foodporn")
+        self.newsubmissions = subreddit.new(limit = LIMIT_POST)
 
     @commands.command()
     @commands.cooldown(1, 10, commands.BucketType.guild)
     async def foodporn(self, ctx):
         """Gets a random thing from /r/foodporn"""
         try:
-            async with self.session.get(self.foodpornapi) as r:
-                result = await r.json(body)
+            async with self.newsubmissions:
+                    current_time = int(time.time())
+                    posts = []
 
-                urls = [ ]
-                for child in result.data.children
-                    if child.data.comain != "self.foodporn"
-                        urls.push(child.data.url)
+                    for submission in newsubmissions
+                        subage = ((current_time - submission.created_utc) /60 /60 /24)
+                        if subage < 1:
+                            posts.append(submission)
 
-                if urls.count <= 0
-                    await ctx.send("Couldn't find anything tastey :(")
-                    return
-
-            rnd = Math.floor(Math.random()*urls.length)
-            picked_url = urls[rnd]
-
-            persed_url = url.parse(picked_url)
-            if parsed_url.host == "imgur.com"
-                parsed_url.host = "i.imgur.com"
-                parsed_url.pathname = parsed_url.pathname + ".jpg"
-
-                picked_url = url.format(parsed_url)
+                    random_number = random.randit(0,LIMIT_POST -1)
+                    random_post = posts[random_number]
             
-            await ctx.send(picked_url)
+            await ctx.send(random_post)
         except:
-            await ctx.send("API Error")
-
-    def __unload(self):
-        self.bot.loop.create_task(self.session.close())
+            await ctx.send("Some shit went very wrong")
