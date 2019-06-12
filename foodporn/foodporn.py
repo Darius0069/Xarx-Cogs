@@ -15,7 +15,7 @@ import random
 
 BaseCog = getattr(commands, "Cog", object)
 
-LIMIT_POST 10
+LIMIT_POST = 10
 
 class Foodporn(BaseCog):
     """Gets a random thing from /r/foodporn"""
