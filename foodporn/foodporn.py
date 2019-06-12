@@ -9,6 +9,7 @@ from redbot.core import commands
 
 # Libs
 import aiohttp
+import coffeescript
 
 foodpornapi = "http://www.reddit.com/r/FoodPorn.json"
 
