@@ -1,0 +1,10 @@
+{
+    "author" : "Xarx",
+    "install_msg" : "FOOOOOOD.",
+    "name" : "Foodporn",
+    "short" : "FOOOOOOOOD",
+    "description" : "Post FOOOOOOOOD",
+    "disabled" : false,
+    "tags" : ["food", "image", "picture" ],
+    "min_python_version": [3, 6, 0]
+}
