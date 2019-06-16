@@ -57,16 +57,6 @@ class Core(Stuff):
             + "(Code: {})".format(inline(str(error_code)))
         )
 
-    async def _version_msg(self, ctx, version, authors):
-        """Cog version message."""
-        msg = box(
-            _("Based on: Nsfw cog version: {version}\nAuthors: {authors}").format(
-                version=version, authors=", ".join(authors)
-            ),
-            lang="py",
-        )
-        return await ctx.send(msg)
-
     async def _make_embed(self, ctx, sub, name, url):
         """Function to make the embed for all Reddit API images."""
         url, subr = await self._get_imgs(ctx, sub=sub, url=None, subr=None)
