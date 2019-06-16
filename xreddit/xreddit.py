@@ -17,4 +17,4 @@ class Xreddit(Core, commands.Cog):
     async def foodporn(self, ctx):
         """Show some foodporn images from random subreddits."""
 
-        await self._send_msg(ctx, "Foodporn", sub=sub.FOODPORN)
+        await self._send_msg(ctx, sub=constants.FOODPORN)
