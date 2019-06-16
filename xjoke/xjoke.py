@@ -35,12 +35,12 @@ class Xjoke(BaseCog):
         try:
             async with self.session.get(self.argx) as r:
                 result = await r.json()
-            if result['type'] = 'twopart':
-                await ctx.send(result['setup'])
-                time.sleep(.5)
-                await ctx.send(result['delivery'])
-            else:
-                await ctx.send(result['joke'])
+            await ctx.send(result['type'])
+#                await ctx.send(result['setup'])
+#                time.sleep(.5)
+#                await ctx.send(result['delivery'])
+#            else:
+#                await ctx.send(result['joke'])
         except:
             await ctx.send("API Error")
 
