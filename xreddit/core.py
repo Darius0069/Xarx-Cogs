@@ -73,7 +73,7 @@ class Core(Stuff):
     async def _api_errors_msg(self, ctx, error_code=None):
         """Error message when API calls fail."""
         return await ctx.send(
-            _("Error when trying to contact image service, please try again later. ")
+            ("Error when trying to contact image service, please try again later. ")
             + "(Code: {})".format(inline(str(error_code)))
         )
 
@@ -85,18 +85,18 @@ class Core(Stuff):
         if url.endswith(GOOD_EXTENSIONS):
             em = await self._embed(
                 color=0x891193,
-                title=(_("Here is {name} image ...") + " \N{EYES}").format(name=name),
+                title=(("Here is {name} image ...") + " \N{EYES}").format(name=name),
                 description=bold(_("[Link if you don't see image]({url})")).format(url=url),
                 image=url,
-                footer=_("Requested by {req} {emoji} • From r/{r}").format(
+                footer=("Requested by {req} {emoji} • From r/{r}").format(
                     req=ctx.author.display_name, emoji=await self.emoji(), r=subr
                 ),
             )
         if url.startswith("https://gfycat.com"):
             em = (
-                _("Here is {name} gif ...")
+                ("Here is {name} gif ...")
                 + " \N{EYES}\n\n"
-                + _("Requested by {req} {emoji} • From {r}\n{url}")
+                + ("Requested by {req} {emoji} • From {r}\n{url}")
             ).format(
                 name=name,
                 req=bold(f"{ctx.author.display_name}"),
