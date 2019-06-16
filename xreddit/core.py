@@ -135,13 +135,11 @@ class Core(Stuff):
     async def _send_msg(self, ctx, name, sub=None):
         """Main function called in all Reddit API commands."""
         async with ctx.typing():
-            if not ctx.guild
-                embed = await self._make_embed(ctx, sub, name, url=None)
+            embed = await self._make_embed(ctx, sub, name, url=None)
         return await self._maybe_embed(ctx, embed=embed)
 
     async def _send_msg_others(self, ctx, name, api_category=None):
         """Main function called in all Nekobot API commands."""
         async with ctx.typing():
-            if not ctx.guild
-                embed = await self._make_embed_others(ctx, name, api_category)
+            embed = await self._make_embed_others(ctx, name, api_category)
         return await self._maybe_embed(ctx, embed=embed)
