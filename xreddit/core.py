@@ -9,7 +9,7 @@ from redbot.core.utils.chat_formatting import bold, box, inline
 from random import choice
 from typing import Optional
 
-from .constants import (
+from .xreddit import (
     REDDIT_BASEURL,
     REDDIT_ENDPOINT,
     IMGUR_LINKS,
