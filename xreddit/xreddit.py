@@ -4,7 +4,7 @@ from redbot.core import checks, commands
 
 from typing import Union
 
-from . import constants as sub
+from .constants import Stuff as sub
 from .core import Core
 
 class Xreddit(Core, commands.Cog):
