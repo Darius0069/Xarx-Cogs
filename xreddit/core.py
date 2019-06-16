@@ -14,7 +14,6 @@ from .constants import (
     REDDIT_ENDPOINT,
     IMGUR_LINKS,
     GOOD_EXTENSIONS,
-    NEKOBOT_BASEURL,
     Stuff,
 )
 
