@@ -106,6 +106,19 @@ class Core(Stuff):
             )
         return em
 
+    @staticmethod
+    async def _embed(
+        color=None, title=None, description=None, image=None, footer: Optional[str] = None
+    ):
+        em = discord.Embed(color=color, title=title, description=description)
+        em.set_image(url=image)
+        if footer:
+            em.set_footer(text=footer)
+        return em
+
+    def cog_unload(self):
+        self.bot.loop.create_task(self.session.close())
+
     async def _maybe_embed(self, ctx, embed):
         """
             Function to choose if type of the message is an embed or not
@@ -132,16 +145,3 @@ class Core(Stuff):
             if not ctx.guild or ctx.message.channel.is_nsfw():
                 embed = await self._make_embed_others(ctx, name, api_category)
         return await self._maybe_embed(ctx, embed=embed)
-
-    @staticmethod
-    async def _embed(
-        color=None, title=None, description=None, image=None, footer: Optional[str] = None
-    ):
-        em = discord.Embed(color=color, title=title, description=description)
-        em.set_image(url=image)
-        if footer:
-            em.set_footer(text=footer)
-        return em
-
-    def cog_unload(self):
-        self.bot.loop.create_task(self.session.close())
