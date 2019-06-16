@@ -34,7 +34,7 @@ class Xjoke(BaseCog):
         """Let's try a joke"""
         setx = str("self." + argx)
         try:
-            async with self.session.get(self.argx) as r:
+            async with self.session.get(self.setx) as r:
                 result = await r.json()
             await ctx.send(setx)
 #                await ctx.send(result['setup'])
