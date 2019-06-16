@@ -29,10 +29,19 @@ class Xjoke(BaseCog):
     
 
     @commands.command()
-    @commands.cooldown(1, 10, commands.BucketType.guild)
+    @commands.cooldown(1, 1, commands.BucketType.guild)
     async def xjoke(self, ctx, *, argx):
         """Let's try a joke"""
-        setx = str("self." + argx)
+        if argx = "misc" or "Misc":
+            setx = "miscx"
+        elif argx = "programming" or "Programming" or "coding":
+            setx = "programmingx"
+        elif argx = "dark" or "Dark"
+            setx = "darkx"
+        elif arx = "any" or ""
+            setx = "anyx"
+        else
+            ctx.send("Input a category or leave blank")
         try:
             async with self.session.get(self.setx) as r:
                 result = await r.json()
