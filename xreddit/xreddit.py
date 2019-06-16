@@ -45,3 +45,51 @@ class Xreddit(Core, commands.Cog):
         """Show some foodporn images from random subreddits."""
 
         await self._send_msg(ctx, "Foodporn", sub=FOODPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="shittyfoodporn", aliases=["badfood", "shitfood", "shittyfood"])
+    async def shittyfoodporn(self, ctx):
+        """Show some SHITTY foodporn images from random subreddits."""
+
+        await self._send_msg(ctx, "Shitty Foodporn", sub=SHITTYFOODPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="earthporn", aliases=["EarthPorn", "Earthporn", "natureporn"])
+    async def earthporn(self, ctx):
+        """Show some earthporn images from random subreddits."""
+
+        await self._send_msg(ctx, "Earthporn", sub=EARTHPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="designporn", aliases=["DesignPorn", "Designporn", "designprn"])
+    async def designporn(self, ctx):
+        """Show some designporn images from random subreddits."""
+
+        await self._send_msg(ctx, "Designporn", sub=DESIGNPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="hellscape", aliases=["HELLSCAPE", "Hellscape", "hellscapeporn"])
+    async def hellscapeporn(self, ctx):
+        """Show some hellscapes from random subreddits."""
+
+        await self._send_msg(ctx, "Hellscape", sub=HELLSCAPEPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="apocalypseporn", aliases=["doomsdayporn", "ApocalypsePorn", "Apocalypseporn"])
+    async def apocalypseporn(self, ctx):
+        """Show some apocalypseporn images from random subreddits."""
+
+        await self._send_msg(ctx, "Apocalypseporn", sub=APOCALYPSEPORN)
+
+    @commands.bot_has_permissions(embed_links=True)
+    @commands.cooldown(1, 0.5, commands.BucketType.user)
+    @commands.command(name="artporn", aliases=["art", "ArtPorn", "Artporn"])
+    async def artporn(self, ctx):
+        """Show some artporn images from random subreddits."""
+
+        await self._send_msg(ctx, "Artporn", sub=ARTPORN)

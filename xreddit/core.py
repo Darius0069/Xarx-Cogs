@@ -85,8 +85,8 @@ class Core(Stuff):
         if url.endswith(GOOD_EXTENSIONS):
             em = await self._embed(
                 color=0x891193,
-                title=(("Here is {name} image ...") + " \N{EYES}").format(name=name),
-                description=bold(("[Link if you don't see image]({url})")).format(url=url),
+                title=(("Here, have some {name} ") + " \N{EYES}").format(name=name),
+                description=bold(("[Click here if don't see image]({url})")).format(url=url),
                 image=url,
                 footer=("Requested by {req} {emoji} • From r/{r}").format(
                     req=ctx.author.display_name, emoji=await self.emoji(), r=subr
@@ -94,7 +94,7 @@ class Core(Stuff):
             )
         if url.startswith("https://gfycat.com"):
             em = (
-                ("Here is {name} gif ...")
+                ("Here is a {name} gif ...")
                 + " \N{EYES}\n\n"
                 + ("Requested by {req} {emoji} • From {r}\n{url}")
             ).format(
