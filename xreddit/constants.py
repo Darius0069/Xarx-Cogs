@@ -14,16 +14,15 @@ class Stuff:
         ]
         emoji = choice(EMOJIS)
         return emoji
-    REDDIT_BASEURL = "https://api.reddit.com/r/"
-    REDDIT_ENDPOINT = "/random"
-    IMGUR_LINKS = "http://imgur.com", "https://m.imgur.com", "https://imgur.com"
-    GOOD_EXTENSIONS = ".png", ".jpg", ".jpeg", ".gif"
-
-    # Subreddits
-    FOODPORN = ["FoodPorn", "CulinaryPlating", "Pizza", "sexypizza", "steak"]
-    SHITTYFOODPORN = ["shittyfoodporn", "shittyfoodporn"]
-    EARTHPORN = ["EarthPorn", "EarthPorn"]
-    DESIGNPORN = ["DesignPorn", "DesignPorn"]
-    HELLSCAPEPORN = ["HellscapePorn", "HellscapePorn"]
-    APOCALYPSEPORN = ["ApocalypsePorn", "ApocalypsePorn"]
-    ARTPORN = ["ArtPorn", "ArtPorn"]
+REDDIT_BASEURL = "https://api.reddit.com/r/"
+REDDIT_ENDPOINT = "/random"
+IMGUR_LINKS = "http://imgur.com", "https://m.imgur.com", "https://imgur.com"
+GOOD_EXTENSIONS = ".png", ".jpg", ".jpeg", ".gif"
+# Subreddits
+FOODPORN = ["FoodPorn", "CulinaryPlating", "Pizza", "sexypizza", "steak"]
+SHITTYFOODPORN = ["shittyfoodporn", "shittyfoodporn"]
+EARTHPORN = ["EarthPorn", "EarthPorn"]
+DESIGNPORN = ["DesignPorn", "DesignPorn"]
+HELLSCAPEPORN = ["HellscapePorn", "HellscapePorn"]
+APOCALYPSEPORN = ["ApocalypsePorn", "ApocalypsePorn"]
+ARTPORN = ["ArtPorn", "ArtPorn"]
