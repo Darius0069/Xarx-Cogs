@@ -1,0 +1,12 @@
+{
+  "author": ["Predä", "aikaterna"],
+  "install_msg": "Thank you for installing my Nsfw cog !\nImportant note: As indicated in name of this cog, it contains mature content and is not suited for all audiences, use it responsibly.\nUse `[p]help Nsfw` to get all commands.",
+  "name": "Xreddit",
+  "short": "Send random <something>PORN images from random subreddits.",
+  "description": "Send random <something>PORN images from random subreddits..",
+  "tags": [
+      "foodporn",
+      "reddit",
+      "images"
+  ]
+}
