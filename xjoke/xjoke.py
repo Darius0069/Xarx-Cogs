@@ -32,10 +32,11 @@ class Xjoke(BaseCog):
     @commands.cooldown(1, 10, commands.BucketType.guild)
     async def xjoke(self, ctx, *, argx):
         """Let's try a joke"""
+        setx = str("self." + argx)
         try:
             async with self.session.get(self.argx) as r:
                 result = await r.json()
-            await ctx.send(result['type'])
+            await ctx.send(setx)
 #                await ctx.send(result['setup'])
 #                time.sleep(.5)
 #                await ctx.send(result['delivery'])
