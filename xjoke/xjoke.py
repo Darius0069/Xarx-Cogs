@@ -30,7 +30,7 @@ class Xjoke(BaseCog):
 
     @commands.command()
     @commands.cooldown(1, 10, commands.BucketType.guild)
-    async def goldendoggo(self, ctx, *, argx):
+    async def xjoke(self, ctx, *, argx):
         """Let's try a joke"""
         try:
             async with self.session.get(self.argx) as r:
