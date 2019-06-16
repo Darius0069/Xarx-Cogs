@@ -86,7 +86,7 @@ class Core(Stuff):
             em = await self._embed(
                 color=0x891193,
                 title=(("Here is {name} image ...") + " \N{EYES}").format(name=name),
-                description=bold(_("[Link if you don't see image]({url})")).format(url=url),
+                description=bold(("[Link if you don't see image]({url})")).format(url=url),
                 image=url,
                 footer=("Requested by {req} {emoji} • From r/{r}").format(
                     req=ctx.author.display_name, emoji=await self.emoji(), r=subr
