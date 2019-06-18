@@ -21,4 +21,4 @@ async def thesauruskey(self, ctx, *, key):
     config_boards = await self.config.apikey()
     # Set
     await self.config.apikey.set(key)
-await ctx.send("The apikey has been added.")
+    await ctx.send("The apikey has been added.")
