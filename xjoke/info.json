@@ -1,0 +1,10 @@
+{
+    "author" : "Xarx (๖ۣۜζ͜͡Darius#0069)",
+    "install_msg" : "Thank you for installing this cog. Probably not your best idea, but hey. Thanks.",
+    "name" : "Xjoke",
+    "short" : "Posts jokes",
+    "description" : "Post jokes from an API, I didn't make these up whatsoever",
+    "disabled" : false,
+    "tags" : ["jokes"],
+    "min_python_version": [3, 6, 0]
+}
