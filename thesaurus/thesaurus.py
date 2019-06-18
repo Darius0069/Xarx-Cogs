@@ -13,8 +13,8 @@ class Thesaurus(BaseCog):
         default_global = {"apikey": ""}
 self.config.register_global(**default_global)
 
-    @commands.command()
-    @checks.is_owner()
+@commands.command()
+@checks.is_owner()
     async def thesauruskey(self, ctx, *, key):
         """Set a key to use The Saurus API"""
         # Load
