@@ -11,7 +11,7 @@ class Thesaurus(BaseCog):
     def __init__(self):
         self.config = Config.get_conf(self, identifier=900696642)
         default_global = {"apikey": ""}
-self.config.register_global(**default_global)
+        self.config.register_global(**default_global)
 
 @commands.command()
 @checks.is_owner()
