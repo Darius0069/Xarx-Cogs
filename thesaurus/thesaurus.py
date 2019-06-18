@@ -15,10 +15,10 @@ self.config.register_global(**default_global)
 
 @commands.command()
 @checks.is_owner()
-    async def thesauruskey(self, ctx, *, key):
-        """Set a key to use The Saurus API"""
-        # Load
-        config_boards = await self.config.apikey()
-        # Set
-        await self.config.apikey.set(key)
+async def thesauruskey(self, ctx, *, key):
+    """Set a key to use The Saurus API"""
+    # Load
+    config_boards = await self.config.apikey()
+    # Set
+    await self.config.apikey.set(key)
 await ctx.send("The apikey has been added.")
