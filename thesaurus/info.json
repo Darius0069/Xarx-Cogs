@@ -1,0 +1,9 @@
+{
+    "author" : ["Xarx"],
+    "bot_version": [3,1,2],
+    "install_msg" : "Thanks for installing this thing, I'll make an actual install message someday",
+    "short" : "Looks stuff up from The Saurus",
+    "description" : "Looks stuff up from The Saurus",
+    "tags" : ["information"],
+    "hidden" : false
+  }
