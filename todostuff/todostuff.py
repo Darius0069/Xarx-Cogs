@@ -8,7 +8,7 @@ class Todostuff(BaseCog):
     """I ain't got an idea if this will ever work"""
 
     def __init__(self):
-        self.config = Config.get_conf(self, identifier=900697142) force_registration=True
+        self.config = Config.get_conf(self, identifier=900697142, force_registration=True)
         default_user = {"Stuffs": ""}
         self.config.register_global(**default_global)
         self.config.register_global(
