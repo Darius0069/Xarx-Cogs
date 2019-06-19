@@ -4,6 +4,8 @@ import random
 from redbot.core import Config
 from redbot.core import commands
 
+BaseCog = getattr(commands, "Cog", object)
+
 class Todostuff(BaseCog):
     """I ain't got an idea if this will ever work"""
 
