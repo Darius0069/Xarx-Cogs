@@ -11,14 +11,11 @@ class Todostuff(BaseCog):
 
     def __init__(self):
         self.config = Config.get_conf(self, identifier=900697142, force_registration=True)
-        self.config.register_user(
-            todolist={}
-        )
 
-@commands.command()
-async def testtodo(self, ctx):
-    currentlist = self.config.user(ctx.author).todolist
-    await ctx.send(currentlist)
+#@commands.command()
+#async def testtodo(self, ctx):
+#    currentlist = self.config.user(ctx.author).todolist
+#    await ctx.send(currentlist)
 
 #@commands.command()
 #async def todo(self, ctx, addtodo):
